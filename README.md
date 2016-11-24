@@ -1,2 +1,2 @@
 # JavaExercises
-Basic Java exercises with puzzles and algorhytms 
+Basic Java exercises with puzzles and algorithms 
