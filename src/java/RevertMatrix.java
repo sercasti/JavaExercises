@@ -15,15 +15,15 @@ public class RevertMatrix {
 	}
 
 	private static int[][] revert(int[][] matrix) {
-		int rows = matrix.length;
-		int cols = matrix[0].length;
-		for (int i = 0; i <= rows / 2; i++) {
-			for (int j = 0; j < cols; j++) {
-				int first = matrix[i][j];
-				int last = matrix[rows - i - 1][cols - j - 1];
-				if(first == last) break;
-				matrix[i][j] = last;
-				matrix[rows - i - 1][cols - j - 1] = first;
+		int totalRows = matrix.length;
+		int totalCols = matrix[0].length;
+		for (int rowIndex = 0; rowIndex <= totalRows / 2; rowIndex++) {
+			for (int colIndex = 0; colIndex < totalCols; colIndex++) {
+				int firstItem = matrix[rowIndex][colIndex];
+				int lastItem = matrix[totalRows - rowIndex - 1][totalCols - colIndex - 1];
+				if(firstItem == lastItem) break;
+				matrix[rowIndex][colIndex] = lastItem;
+				matrix[totalRows - rowIndex - 1][totalCols - colIndex - 1] = firstItem;
 			}
 		}
 		return matrix;
