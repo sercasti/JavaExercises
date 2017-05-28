@@ -7,6 +7,14 @@ import java.util.stream.Stream;
  * starting position) in the maze and is asked to try to reach another position
  * (the goal position). Positions in the maze will either be open or blocked
  * with an obstacle. Positions are identified by (x,y) coordinates.
+ * 
+ * Implementation - a recursive method to:
+ * a) Check for out of bounds, then return false
+ * b) Check for already marked, walls, or wrong path, then return false
+ * c) Check for Goal, return true
+ * d) if none of the above, mark position as path
+ * e) recursively try north, east, south, west
+ * f) if none came back as true, mark as wrong path.
  */
 
 public class Maze {
