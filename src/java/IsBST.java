@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 public class IsBST {
 
 	public static void main(String args[]) {
