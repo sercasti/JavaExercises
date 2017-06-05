@@ -1,8 +1,8 @@
 
 public class ShortURL {
 
-	public static final String ALPHABET = "23456789bcdfghjkmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ-_";
-	public static final int BASE = ALPHABET.length();
+	private static final String ALPHABET = "23456789bcdfghjkmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ-_";
+	private static final int BASE = ALPHABET.length();
 
 	public static String encode(int num) {
 		StringBuilder str = new StringBuilder();
@@ -20,11 +20,12 @@ public class ShortURL {
 		}
 		return num;
 	}
+
 	public static void main(String[] args) {
-        int num = 122312215;
-        String url = encode(num);
-        System.out.println("short url:  " + url);
-        System.out.println("Id: " + decode(url));
-    }
+		int num = 122312215;
+		String url = encode(num);
+		System.out.println("short url:  " + url);
+		System.out.println("Id: " + decode(url));
+	}
 
 }
